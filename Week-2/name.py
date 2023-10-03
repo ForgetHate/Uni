@@ -1,3 +1,5 @@
+# Week 2, Exercise code #
+
 name = "Black Knight"
 print(name[0])
 print(name[4])
