@@ -1,4 +1,4 @@
-# This code prints, adds and multiplies tow user input nunmbers #
+# This code prints, adds and multiplies two user input nunmbers #
 # Week 2, Exercise code #
 
 a = float(input("Please enter a number: "))
