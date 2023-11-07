@@ -1,5 +1,5 @@
 if __name__ == '__main__':
-    # import fah_to_cel
+    import fah_to_cel as ftoc
     tempratures = []
     
     def recall():
@@ -7,8 +7,7 @@ if __name__ == '__main__':
         f_or_c = int(input('Is the temprature Fahreinheit or Celcius? \n1. FahreinHeit \n2. Celcius \nEnter: '))
         
         if f_or_c == 1:
-            temp = (temp - 32) * 5/9
-            tempratures.append(temp)
+            tempratures.append(ftoc.conv(temp))
             again()
         elif f_or_c == 2:
             tempratures.append(temp)
@@ -20,13 +19,13 @@ if __name__ == '__main__':
 
     def again():
         option = input('Would you like to enter another temprature? ')
-        if option == "yes":
+        if option == "y":
             recall()
-        elif option == "no":
+        elif option == "n":
             print(tempratures)
-            print(f'Highest temprature:', max(tempratures), '\nLowest Temprature', min(tempratures))
+            print(f'Highest temprature:', max(tempratures), '\nLowest Temprature', min(tempratures), '\nAverage Temprature: ', (sum(tempratures)/len(tempratures)))
         else:
-            print('Please enter yes or no.')
+            print('Please enter y or n.')
             again()
 
     recall()
